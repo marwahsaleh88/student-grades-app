@@ -2,12 +2,11 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "build": "tsc",
-  "start": "node dist/server.js",
-  "dev": "tsx --env-file=.env src/server.ts"
-}
-,
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsx --env-file=.env src/server.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
