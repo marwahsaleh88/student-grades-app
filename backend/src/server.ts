@@ -18,6 +18,11 @@ app.use("/api/students", studentRoutes);
 // ✅ Konzept: Funktions-Typisierung mit async
 async function startServer(): Promise<void> {
 await connectDB();
+app.get("/", (req, res) => {
+  res.send("Backend läuft! 🚀");
+});
+
+
 app.listen(PORT, () => {
 console.log(`Server läuft auf Port ${PORT}`);
 });
