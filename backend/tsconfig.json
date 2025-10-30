@@ -7,8 +7,10 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": false,
-    // "noEmit": false,
-    "moduleResolution": "node"
+    "noEmit": false,
+    "moduleResolution": "node",
+    "types": ["node"],
+    "lib": ["esnext"]
   },
   "include": ["src"],
   "exclude": ["node_modules"]
