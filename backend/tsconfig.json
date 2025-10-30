@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES2022",
     "module": "ES2022",
     "outDir": "./dist",
     "rootDir": "./src",
@@ -9,9 +9,8 @@
     "skipLibCheck": true,
     "noEmit": false,
     "moduleResolution": "node",
-    "lib": ["esnext", "dom"],
-    "types": ["node"],
-    "typeRoots": ["./node_modules/@types"]
+    "lib": ["ES2022"]
+    // removed "types" and "typeRoots" to let TS auto-resolve installed @types
   },
   "include": ["src"],
   "exclude": ["node_modules"]
