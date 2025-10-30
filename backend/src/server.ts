@@ -7,10 +7,25 @@ const app: Express = express();
 const PORT: number = parseInt(process.env.PORT || "3000");
 // Middleware
 // app.use(cors());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://student-grades-frontend.onrender.com",
+  "https://student-grades-frontend-0fvx.onrender.com"
+];
+
 const corsOptions = {
- origin: process.env.FRONTEND_URL || "http://localhost:5173",
- credentials: true
+  origin: (origin: string | undefined, callback: Function) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
 };
+
+app.use(cors(corsOptions));
+
 app.use(cors(corsOptions));
 app.use(express.json());
 // Routen
