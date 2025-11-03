@@ -10,7 +10,7 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc",
     "postbuild": "echo '✅ Build succeeded' && ls -la dist",
-    "start": "tsx dist/server.js",
+    "start": "tsx src/server.ts",
     "dev": "tsx --env-file=.env src/server.ts"
   },
   "dependencies": {
