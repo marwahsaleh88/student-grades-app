@@ -2,28 +2,25 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
-  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/server.ts",
+    "dev": "tsc --watch"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "scripts": {
-    "clean": "rm -rf dist",
-    "build": "npm run clean && tsc",
-    "postbuild": "echo '✅ Build succeeded' && ls -la dist",
-    "start": "tsx src/server.ts",
-    "dev": "tsx --env-file=.env src/server.ts"
-  },
+  "description": "",
   "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
     "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "mongoose": "^8.19.2",
-    "@types/node": "^20.0.0",
-    "@types/express": "^4.17.0",
-    "@types/cors": "^2.8.12",
-    "tsx": "^4.20.6"
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1",
+    "tsx": "^4.10.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10",
-    "typescript": "^5.9.3"
+    "typescript": "^5.4.5"
   }
 }
